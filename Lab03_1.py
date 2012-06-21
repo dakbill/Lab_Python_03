@@ -1,11 +1,11 @@
-i=5;out="2,3,5,"
-while True:
-    i+=1
-    if((i%2)!=0 and (i%3)!=0 and (i%5)!=0):
-        #number=
-        out+= str(i)+","
-    else:
-        continue
-    if(i==500):
-        break
-print out
+div_count=0;prime_count=0
+inp=int(raw_input("Enter number:"))
+for i in range(1,inp+1):
+    if(inp%i==0):
+        div_count+=1
+    if(div_count==2):
+        prime_num=inp
+        prime_count+=1
+        print "prime"
+        
+
