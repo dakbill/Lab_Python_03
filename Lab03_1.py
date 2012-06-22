@@ -1,11 +1,15 @@
-div_count=0;prime_count=0
-inp=int(raw_input("Enter number:"))
-for i in range(1,inp+1):
-    if(inp%i==0):
-        div_count+=1
-    if(div_count==2):
-        prime_num=inp
+n=50
+print "The first 50 primes:"
+prime_count=0
+possible_prime=2
+while prime_count<n:
+    divisor_count=0
+    for i in range(1,possible_prime+1):
+        if possible_prime % i==0:
+            divisor_count +=1
+    if divisor_count ==2:
+        print possible_prime,
         prime_count+=1
-        print "prime"
-        
-
+        if prime_count%10==0:
+            print
+    possible_prime+=1
